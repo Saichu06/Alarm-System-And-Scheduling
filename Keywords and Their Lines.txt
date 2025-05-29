@@ -1,0 +1,101 @@
+Keywords and Their Lines:
+import (Lines 1-5): Imports modules and libraries (datetime, json, os, time, tkinter, messagebox, simpledialog, ttk, notification).
+
+def (Lines 9, 15, 22, 31, 44, 54, 63, 76, 124): Defines functions.
+
+return (Lines 11, 14, 128): Exits a function and optionally returns a value.
+
+try (Lines 10, 32): Attempts to execute code, handling exceptions if they occur.
+
+except (Lines 13, 39): Handles exceptions that occur in a try block.
+
+with (Lines 10, 16): Simplifies exception handling by encapsulating common setup and cleanup tasks.
+
+if (Lines 26, 41, 59, 69, 133): Conditional statement.
+
+else (Line 137): Provides an alternative block of code to execute if the if statement is false.
+
+for (Lines 50, 103): Loop structure.
+
+print (Lines 95, 98, 99, 101): Outputs information to the console.
+
+Functions and Their Lines:
+load_events (Lines 9-14): Loads events from a JSON file.
+
+Description: Reads the events from the JSON file and returns them. If the file does not exist or is corrupted, it returns an empty list.
+
+save_events (Lines 15-20): Saves events to a JSON file.
+
+Description: Writes the current events to a JSON file for persistent storage.
+
+add_event_gui (Lines 22-42): Adds a new event via a GUI.
+
+Description: Prompts the user for event details using dialog boxes and saves the event to the JSON file.
+
+refresh_events (Lines 44-52): Refreshes the list of events in the GUI.
+
+Description: Loads events from the JSON file and displays them in the listbox.
+
+delete_event_gui (Lines 54-61): Deletes a selected event from the list.
+
+Description: Removes the selected event from the JSON file and updates the display.
+
+search_event_gui (Lines 63-74): Searches for events by title or date.
+
+Description: Prompts the user to enter a search term and displays matching events.
+
+check_alarms (Lines 76-122): Checks for upcoming events and triggers alarms.
+
+Description: Compares current time with event times and triggers notifications for due events, updating recurring events as needed.
+
+root.after (Line 123): Schedules the next alarm check.
+
+root.mainloop (Line 124): Starts the Tkinter GUI main loop.
+
+Function Calls and Their Lines:
+json.load (Line 11): Loads data from a JSON file.
+
+json.dump (Line 18): Saves data to a JSON file.
+
+simpledialog.askstring (Lines 25, 26, 27, 28): Prompts the user for a string input.
+
+datetime.datetime.strptime (Line 32, 103): Parses a string into a datetime object.
+
+messagebox.showinfo (Lines 37, 60): Displays an information message box.
+
+messagebox.showerror (Line 40): Displays an error message box.
+
+messagebox.showwarning (Line 56): Displays a warning message box.
+
+event_listbox.delete (Line 45): Clears all items in the listbox.
+
+event_listbox.insert (Line 49): Inserts an item into the listbox.
+
+notification.notify (Line 109): Sends a desktop notification.
+
+tk.Tk (Line 124): Initializes the Tkinter main window.
+
+tk.Frame (Line 126): Creates a frame widget.
+
+tk.Button (Lines 128, 129, 130, 131): Creates button widgets.
+
+tk.Listbox (Line 133): Creates a listbox widget.
+
+root.after (Line 123): Schedules a function to be called after a given amount of time.
+
+root.mainloop (Line 124): Starts the Tkinter event loop.
+
+Additional Descriptions for Function Usage:
+load_events: Retrieves events from a file to maintain state between program executions.
+
+save_events: Saves the current state of events to a file for persistence.
+
+add_event_gui: Interactively collects event details from the user and adds them to the events list.
+
+refresh_events: Updates the display to show the latest list of events.
+
+delete_event_gui: Removes an event selected by the user from the events list.
+
+search_event_gui: Allows the user to search for events by title or date.
+
+check_alarms: Periodically checks the current time against event times to trigger alarms for due events.
